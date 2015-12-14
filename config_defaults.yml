@@ -1,6 +1,6 @@
 ---
 .travis.yml:
-  script: "\"bundle exec rake validate lint spec SPEC_OPTS='--format documentation'\""
+  script: "\"bundle exec rake validate lint spec SPEC_OPTS='--color --format documentation'\""
   includes:
   - rvm: 1.8.7
     env: PUPPET_GEM_VERSION="~> 3.0"
@@ -14,17 +14,22 @@
     env: PUPPET_GEM_VERSION="~> 4.0" STRICT_VARIABLES="yes"
 Gemfile:
   required:
-    ':development, :unit_tests':
-      - gem: rspec-core
-        version: '3.1.7'
-      - gem: puppetlabs_spec_helper
-      - gem: simplecov
-      - gem: puppet_facts
-      - gem: json
+    ':test':
+      - gem: rake
+      - gem: rspec-puppet
+      - gem: puppet-lint
       - gem: metadata-json-lint
+      - gem: rspec-puppet-facts
+      - gem: rspec
+      - gem: rspec-puppet-utils
+      - gem: puppetlabs_spec_helper
+    ':development':
+      - gem: travis
+      - gem: travis-lint
+      - gem: guard-rake
     ':system_tests':
+      - gem: beaker
       - gem: beaker-rspec
-      - gem: serverspec
       - gem: beaker-puppet_install_helper
 Rakefile:
   default_disabled_lint_checks:
@@ -33,3 +38,24 @@ Rakefile:
   - 'disable_class_inherits_from_params_class'
   - 'disable_documentation'
   - 'disable_single_quote_string_with_variables'
+Guardfile:
+
+  guard 'rake', :task => 'validate' do
+    watch(%r{^hiera\/.+\.yaml$})
+    watch(%r{^manifests\/.+\.pp$})
+    watch(%r{^metadata.json$})
+    watch(%r{^templates\/.+\.erb$})
+    watch(%r{^tests\/.+\.pp$})
+  end
+
+  guard 'rake', :task => 'lint' do
+    watch(%r{^manifests\/.+\.pp$})
+  end
+
+  guard 'rake', :task => 'spec' do
+    watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
+    watch(%r{^manifests\/.+\.pp$})
+    watch(%r{^templates\/.+\.erb$})
+    watch(%r{^spec/.+_spec\.rb$})
+    watch('spec/spec_helper.rb')  { "spec" }
+  end

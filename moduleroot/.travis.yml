@@ -23,5 +23,3 @@ matrix:
       env: <%= allow_failures['env'] %>
 <%   end -%>
 <% end -%>
-notifications:
-  email: false
