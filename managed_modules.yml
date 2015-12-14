@@ -1,10 +1,12 @@
 ---
 - attachmentgenie-example
-- attachmentgenie-puppetmaster
-- attachmentgenie-ufw
-- attachmentgenie-timezone
-- attachmentgenie-ssh
-- attachmentgenie-orchestrate
-- attachmentgenie-network
 - attachmentgenie-locales
 - attachmentgenie-motd
+- attachmentgenie-nabaztag
+- attachmentgenie-network
+- attachmentgenie-orchestrate
+- attachmentgenie-puppetmaster
+- attachmentgenie-ssh
+- attachmentgenie-timezone
+- attachmentgenie-ufw
+
