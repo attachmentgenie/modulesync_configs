@@ -1,4 +1,6 @@
 ---
+- attachmentgenie-stack_example
+- attachmentgenie-profile_example
 - attachmentgenie-example
 - attachmentgenie-locales
 - attachmentgenie-motd
@@ -9,4 +11,7 @@
 - attachmentgenie-ssh
 - attachmentgenie-timezone
 - attachmentgenie-ufw
+- attachmentgenie-roles
+- attachmentgenie-stacks
+- attachmentgenie-profiles
 
