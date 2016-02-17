@@ -16,16 +16,17 @@ Gemfile:
   required:
     ':test':
       - gem: rspec-core
-        version: '3.1.7'
       - gem: puppetlabs_spec_helper
       - gem: simplecov
       - gem: puppet_facts
-      - gem: json
       - gem: metadata-json-lint
     ':development':
       - gem: travis
       - gem: travis-lint
       - gem: guard-rake
+      - gem: puppet-strings
+        git: https://github.com/puppetlabs/puppetlabs-strings.git
+      - gem: redcarpet
     ':system_tests':
       - gem: beaker
       - gem: beaker-rspec
