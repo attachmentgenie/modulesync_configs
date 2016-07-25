@@ -1,4 +1,5 @@
 ---
+- attachmentgenie-role_example
 - attachmentgenie-stack_example
 - attachmentgenie-profile_example
 - attachmentgenie-example
@@ -6,8 +7,6 @@
 - attachmentgenie-motd
 - attachmentgenie-nabaztag
 - attachmentgenie-network
-- attachmentgenie-orchestrate
-- attachmentgenie-puppetmaster
 - attachmentgenie-ssh
 - attachmentgenie-timezone
 - attachmentgenie-ufw

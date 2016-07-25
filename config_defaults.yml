@@ -15,6 +15,7 @@ Gemfile:
     ':test':
       - gem: rspec-core
       - gem: puppetlabs_spec_helper
+      - gem: puppet-strings
       - gem: simplecov
       - gem: puppet_facts
       - gem: metadata-json-lint
@@ -22,13 +23,16 @@ Gemfile:
       - gem: travis
       - gem: travis-lint
       - gem: guard-rake
-      - gem: puppet-strings
-        git: https://github.com/puppetlabs/puppetlabs-strings.git
       - gem: redcarpet
-    ':system_tests':
-      - gem: beaker
-      - gem: beaker-rspec
-      - gem: beaker-puppet_install_helper
+    ':integration':
+      - gem: test-kitchen
+        version: '~> 1.4'
+      - gem: kitchen-vagrant
+      - gem: kitchen-puppet
+      - gem: librarian-puppet
+      - gem: kitchen-inspec
+      - gem: concurrent-ruby
+        version: '~> 0.9'
 Rakefile:
   default_disabled_lint_checks:
   - 'relative'
