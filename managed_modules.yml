@@ -1,16 +1,15 @@
 ---
-- attachmentgenie-role_example
-- attachmentgenie-stack_example
-- attachmentgenie-profile_example
 - attachmentgenie-example
 - attachmentgenie-locales
 - attachmentgenie-motd
 - attachmentgenie-nabaztag
 - attachmentgenie-network
+- attachmentgenie-profile_example
+- attachmentgenie-profiles
+- attachmentgenie-role_example
+- attachmentgenie-roles
 - attachmentgenie-ssh
+- attachmentgenie-stack_example
+- attachmentgenie-stacks
 - attachmentgenie-timezone
 - attachmentgenie-ufw
-- attachmentgenie-roles
-- attachmentgenie-stacks
-- attachmentgenie-profiles
-
