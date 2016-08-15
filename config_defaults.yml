@@ -13,26 +13,30 @@
 Gemfile:
   required:
     ':test':
-      - gem: rspec-core
-      - gem: puppetlabs_spec_helper
-      - gem: puppet-strings
-      - gem: simplecov
-      - gem: puppet_facts
+      - gem: json
+        version: 1.8.3
+      - gem: json_pure
+        version: 2.0.1
       - gem: metadata-json-lint
+      - gem: puppet-strings
+      - gem: puppet_facts
+      - gem: puppetlabs_spec_helper
+      - gem: rspec-core
+      - gem: simplecov
     ':development':
-      - gem: travis
-      - gem: travis-lint
       - gem: guard-rake
       - gem: redcarpet
+      - gem: travis
+      - gem: travis-lint
     ':integration':
-      - gem: test-kitchen
-        version: '~> 1.4'
-      - gem: kitchen-vagrant
-      - gem: kitchen-puppet
-      - gem: librarian-puppet
-      - gem: kitchen-inspec
       - gem: concurrent-ruby
         version: '~> 0.9'
+      - gem: kitchen-inspec
+      - gem: kitchen-puppet
+      - gem: kitchen-vagrant
+      - gem: librarian-puppet
+      - gem: test-kitchen
+        version: '~> 1.4'
 Rakefile:
   default_disabled_lint_checks:
   - 'relative'

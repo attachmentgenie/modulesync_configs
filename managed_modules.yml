@@ -13,3 +13,5 @@
 - attachmentgenie-stacks
 - attachmentgenie-timezone
 - attachmentgenie-ufw
+...
+# vim: syntax=yaml
