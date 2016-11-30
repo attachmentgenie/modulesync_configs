@@ -22,6 +22,7 @@ Gemfile:
       - gem: puppet_facts
       - gem: puppetlabs_spec_helper
       - gem: rspec-core
+      - gem: rspec-puppet-facts
       - gem: simplecov
     ':development':
       - gem: guard-rake
