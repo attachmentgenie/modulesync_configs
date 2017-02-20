@@ -12,6 +12,7 @@
 - attachmentgenie-stack_example
 - attachmentgenie-stacks
 - attachmentgenie-timezone
+- attachmentgenie-toxiproxy
 - attachmentgenie-ufw
 ...
 # vim: syntax=yaml
