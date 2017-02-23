@@ -36,9 +36,30 @@ Gemfile:
       - gem: puppetlabs_spec_helper
       - gem: rspec-core
       - gem: rspec-puppet-facts
+      - gem: rubocop
+        version: '~> 0.47.0'
+        ruby-operator: '>='
+        ruby-version: '2.3.0'
+      - gem: rubocop-rspec
+        version: '~> 1.10.0'
+        ruby-operator: '>='
+        ruby-version: '2.3.0'
       - gem: simplecov
     ':development':
+      - gem: github_changelog_generator
+        version: '~> 1.13.0'
+        ruby-operator: '<'
+        ruby-version: '2.2.2'
+      - gem: rack
+        version: '~> 1.0'
+        ruby-operator: '<'
+        ruby-version: '2.2.2'
+      - gem: github_changelog_generator
+        ruby-operator: '>='
+        ruby-version: '2.2.2'
       - gem: guard-rake
+      - gem: parallel_tests
+      - gem: puppet-blacksmith
       - gem: redcarpet
       - gem: travis
       - gem: travis-lint
