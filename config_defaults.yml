@@ -1,6 +1,6 @@
 ---
 .travis.yml:
-  script: "\"bundle exec rake validate lint spec SPEC_OPTS='--color --format documentation'\""
+  script: "\"bundle exec rake validate lint rubocop spec SPEC_OPTS='--color --format documentation'\""
   includes:
     - rvm: 2.2.7
       env: PUPPET_GEM_VERSION="~> 4.0" STRICT_VARIABLES="yes"
@@ -31,12 +31,8 @@ Gemfile:
       - gem: rspec-puppet-facts
       - gem: rubocop
         version: '~> 0.47.0'
-        ruby-operator: '>='
-        ruby-version: '2.3.0'
       - gem: rubocop-rspec
         version: '~> 1.10.0'
-        ruby-operator: '>='
-        ruby-version: '2.3.0'
       - gem: simplecov
     ':development':
       - gem: github_changelog_generator

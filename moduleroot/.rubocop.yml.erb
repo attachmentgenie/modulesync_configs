@@ -9,11 +9,7 @@ AllCops:
     - .vendor/**/*
     - pkg/**/*
     - spec/fixtures/**/*
-    <%- if !@configs.nil? and @configs.has_key?('AllCops') and @configs['AllCops'].has_key?('Exclude') -%>
-    <%- @configs['AllCops']['Exclude'].each do |x| -%>
-    - <%= x %>
-    <%- end -%>
-    <%- end -%>
+    - test/integration/**/*
 Lint/ConditionPosition:
   Enabled: True
 
